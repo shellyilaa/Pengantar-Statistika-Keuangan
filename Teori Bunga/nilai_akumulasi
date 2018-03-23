@@ -1,0 +1,22 @@
+setwd("C:\\Users\\ASUS\\Documents\\PSK")
+annuitas <- function(num, i, k, t, m=TRUE, j=i/m, n=m*t, v=1/(1+j))
+  switch(num,
+         satu = {
+          
+           pvakhir = k*(1-v^n)/j
+           snakhir=  k*(((1+i)^n) - 1)/j
+           print(pvakhir)
+           print (snakhir)
+           cat ("Nilai present value dari annuitas akhir sebesar:", pvakhir, "\n")
+           cat ("Nilai akumulasi dari annuitas akhir sebesar:", snakhir, "\n")
+         },
+         dua = {
+     
+           pvawal = (k*(1-v^n)/(j*v))
+           snawal = k*(((1+j)^n)-1)/(j*v)
+           print(pvawal)
+           print(snawal)
+           cat ("Nilai present value dari annuitas akhir sebesar:", pvawal, "\n")
+           cat ("Nilai akumulasi dari annuitas akhir sebesar:", snawal, "\n")
+         }
+  )
