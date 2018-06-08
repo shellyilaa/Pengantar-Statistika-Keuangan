@@ -14,20 +14,22 @@ valobligasi <- function(f,r,i,m,TTM){
   frk1=f*rbin*((1+ibin)^k-1)/ibin
   {
     Bm1=Bf1-frk1
-    print(Bm1)}
+  }
+    cat("Harga obligasi untuk theoritical method= ",Bm1,"\n")
 #PRACTICAL METHOD
   Bt=(f*rbin*anbin)+(f*vbin^t)
   Bf2=Bt*(1+k*ibin)
   frk2=k*f*rbin
-  Bm2=Bf2-frk2
-  print(Bm2)
+  { Bm2=Bf2-frk2}
+  cat("Harga obligasi untuk practical method= ",Bm2,"\n")
+ 
   
 #SEMI THEORITICAL METHOD
   Bt=(f*rbin*anbin)+(f*vbin^t)
   Bf3=Bt*(1+ibin)^k
   frk3=k*f*rbin
-  Bm3=Bf3-frk3
-  print(Bm3)
+  {Bm3=Bf3-frk3}
+  cat("Harga obligasi untuk semi theoritical method= ",Bm3,"\n")
 }
 #keterangan
 #f = nilai nominal
