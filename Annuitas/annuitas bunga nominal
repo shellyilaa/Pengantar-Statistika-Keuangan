@@ -1,0 +1,17 @@
+setwd("C:\\Users\\ASUS\\Documents\\PSK")
+annuitas_mn<- function(num,k,i,t,m=TRUE,j=i/m,n=m*t,v=1/(1+j))
+  switch(num, 
+         satu = {
+           an = k*(1-(v^n))/j
+           cat("present value annuitas akhir :",an,"\n")
+           sn = k*(((1+j)^n)-1)/j
+           cat("nilai akumulasi annuitas akhir :",sn)
+         },
+         dua = {
+           an = k*(1-(v^n))/(j*v)
+           cat("present value annuitas awal :",an,"\n")
+           sn = k*(((1+j)^n)-1)/(j*v) 
+           cat("nilai akumulasi annuitas awal :",sn)
+         }
+  )
+
